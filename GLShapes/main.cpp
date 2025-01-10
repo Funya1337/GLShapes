@@ -1,4 +1,5 @@
 #include "Mesh.h"
+#include "Model.h"
 
 #define WIDTH 2560
 #define HEIGHT 1440
@@ -79,6 +80,9 @@ int main()
 
   glViewport(0, 0, WIDTH, HEIGHT);
 
+  Model backpack("models/backpack/backpack.obj");
+  //Model human("models/human/human.obj");
+
   Texture textures[]
   {
     Texture("planks.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
@@ -153,8 +157,10 @@ int main()
     camera.Inputs(window);
     camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
+    backpack.Draw(shaderProgram, camera);
     floor.Draw(shaderProgram, camera);
     light.Draw(shaderProgramLight, camera);
+    //human.Draw(shaderProgram, camera);
 
     glfwSwapBuffers(window);
 

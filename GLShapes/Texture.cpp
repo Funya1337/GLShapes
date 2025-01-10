@@ -3,6 +3,7 @@
 Texture::Texture(const char* image, const char* texType, GLenum slot, GLenum format, GLenum pixelType)
 {
   type = texType;
+  path = image;
 
   int widthImg, heightImg, numColCh;
   
@@ -30,9 +31,9 @@ Texture::Texture(const char* image, const char* texType, GLenum slot, GLenum for
 
 void Texture::texUnit(Shader &shader, const char* uniform, GLuint unit)
 {
-  GLuint tex0Uni = glGetUniformLocation(shader.ID, "tex0");
+  GLuint tex0Uni = glGetUniformLocation(shader.ID, uniform);
   shader.Activate();
-  glUniform1i(tex0Uni, 0);
+  glUniform1i(tex0Uni, unit);
 }
 
 void Texture::Bind()

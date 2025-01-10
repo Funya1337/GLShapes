@@ -1,0 +1,43 @@
+﻿  Scanning sources for module dependencies...
+  std.compat.ixx
+  std.ixx
+  Compiling...
+  std.ixx
+  std.compat.ixx
+  Camera.cpp
+  EBO.cpp
+  main.cpp
+  Mesh.cpp
+  Model.cpp
+  shaderClass.cpp
+C:\Users\gta76\source\repos\GLShapes\GLShapes\shaderClass.cpp(10,27): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
+  stb.cpp
+  Texture.cpp
+  VAO.cpp
+  VBO.cpp
+  Generating Code...
+  glad.c
+Camera.obj : error LNK2019: unresolved external symbol _glfwSetInputMode referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camera.obj : error LNK2019: unresolved external symbol _glfwGetKey referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+shaderClass.obj : error LNK2001: unresolved external symbol _glfwGetKey
+Camera.obj : error LNK2019: unresolved external symbol _glfwGetMouseButton referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camera.obj : error LNK2019: unresolved external symbol _glfwGetCursorPos referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camera.obj : error LNK2019: unresolved external symbol _glfwSetCursorPos referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+main.obj : error LNK2019: unresolved external symbol _glfwInit referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwTerminate referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwWindowHint referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwCreateWindow referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwDestroyWindow referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwWindowShouldClose referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwSetWindowTitle referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwPollEvents referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwGetTime referenced in function _main
+shaderClass.obj : error LNK2001: unresolved external symbol _glfwGetTime
+main.obj : error LNK2019: unresolved external symbol _glfwMakeContextCurrent referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwSwapBuffers referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwSwapInterval referenced in function _main
+Model.obj : error LNK2019: unresolved external symbol "public: __thiscall Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QAE@XZ) referenced in function "private: void __thiscall Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadModel@Model@@AAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Model.obj : error LNK2019: unresolved external symbol "public: __thiscall Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QAE@XZ) referenced in function "private: void __thiscall Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadModel@Model@@AAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Model.obj : error LNK2019: unresolved external symbol "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@PBDI@Z) referenced in function "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z)
+C:\Users\gta76\source\repos\GLShapes\GLShapes\Library\lib\glfw3.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\gta76\source\repos\GLShapes\Debug\GLShapes.exe : fatal error LNK1120: 20 unresolved externals
