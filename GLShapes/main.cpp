@@ -82,11 +82,11 @@ int main()
 
   Model backpack("models/backpack/backpack.obj");
   //Model human("models/human/human.obj");
-
+  
   Texture textures[]
   {
-    Texture("planks.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
-    Texture("planksSpec.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE)
+    Texture("tile.jpg", "diffuse", 0),
+    Texture("planksSpec.png", "specular", 1)
   };
 
   Shader shaderProgram("default.vert", "default.frag");
@@ -158,7 +158,7 @@ int main()
     camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
     backpack.Draw(shaderProgram, camera);
-    floor.Draw(shaderProgram, camera);
+    //floor.Draw(shaderProgram, camera);
     light.Draw(shaderProgramLight, camera);
     //human.Draw(shaderProgram, camera);
 

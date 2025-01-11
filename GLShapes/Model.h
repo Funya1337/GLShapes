@@ -21,6 +21,8 @@
 #include <map>
 #include <vector>
 
+unsigned int TextureFromFile(const char* path, const std::string& directory, bool gamma = false);
+
 class Model
 {
 public:
@@ -32,8 +34,10 @@ public:
 
 private:
   std::vector<Mesh> meshes;
-  std::vector<Texture> textures_loaded;
+  std::vector<std::string> loadedTexName;
+  std::vector<Texture> loadedTex;
   std::string directory;
+  bool checker = false;
 
   void loadModel(std::string path);
   void processNode(aiNode* node, const aiScene* scene);
